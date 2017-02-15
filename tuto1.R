@@ -111,12 +111,7 @@ maxval=0
 maxk=1
 for(i in 1:20){
   ###########################
-  test_result_knn <- knn(train_data, test_data ,train_class, k = i)
-  tempacc <- confusionMatrix(test_result_knn,test_class)$overall[1]
-  if(maxval<tempacc){
-    maxval=tempacc
-    maxk=k
-  }
+  
 }
 maxk
 maxval
