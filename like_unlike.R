@@ -1,8 +1,7 @@
 ## HMM Tutorial
 
-
 ## Generate Like Unlike example
-transition.matrix = matrix(c(0.8,0.2,0.2,0.8),byrow=TRUE,nrow=2)
+transitionmatrix = matrix(c(0.8,0.2,0.2,0.8),byrow=TRUE,nrow=2)
 
 actions <- c("A", "R", "P", "S") 
 likestateprobs <- c(0.3, 0.2, 0.2, 0.3) 
