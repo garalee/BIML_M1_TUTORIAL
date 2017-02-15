@@ -1,5 +1,4 @@
-source('https://bioconductor.org/biocLite.R')
-biocLite('pcaMethods')
+
 library(pcaMethods)
 
 

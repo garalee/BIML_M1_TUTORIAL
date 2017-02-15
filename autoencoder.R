@@ -8,7 +8,7 @@ colnames(wine) <- c("type","Alcohol","Malic acid","Ash","Alcalinity of ash", "Ma
 
 
 wine.type = wine[,1]
-wine.data =wine[,-1]
+wine.data = wine[,-1]
 wine.data = scale(wine.data)
 
 autoencoder.object = autoencode(X.train=wine.data,nl=3,N.hidden=2,unit.type='tanh',lambda=0.01,beta=6,rho=0.01,epsilon=0.1)
@@ -17,19 +17,4 @@ w = autoencoder.object$W[[1]]
 
 reduced.data = wine.data %*% t(w)
 plot(reduced.data,col=wine.type)
-
-
-source('https://bioconductor.org/biocLite.R')
-biocLite('pcaMethods')
-library(pcaMethods)
-
-
-data(metaboliteDataComplete)
-mdc = metaboliteDataComplete
-mdc = scale(mdc)
-autoencoder.object = autoencode(X.train=mdc,nl=3,N.hidden=2,unit.type='logistic',lambda=0.01,beta=6,rho=0.01,epsilon=0.1)
-
-w = autoencoder.object$W[[1]]
-reduced.data = mdc %*% t(w)
-plot(reduced.data)
 
