@@ -50,10 +50,6 @@ abline(b/w[2],-w[1]/w[2])
 abline((b+svp$epsilon)/w[2],-w[1]/w[2],lty=2)
 abline((b-svp$epsilon)/w[2],-w[1]/w[2],lty=2)
 
-## Prediction
-ypred = predict(svp,xtest)
-table(ytest,ypred)
-
 ## Real data
 
 attach(iris)
