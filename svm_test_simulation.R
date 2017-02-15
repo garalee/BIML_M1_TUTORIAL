@@ -55,3 +55,5 @@ abline((b-svp$epsilon)/w[2],-w[1]/w[2],lty=2)
 attach(iris)
 x = subset(iris,select=-Species)
 y = Species
+
+https://github.com/garalee/BIML_M1_TUTORIAL

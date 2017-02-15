@@ -17,4 +17,3 @@ w = autoencoder.object$W[[1]]
 
 reduced.data = wine.data %*% t(w)
 plot(reduced.data,col=wine.type)
-

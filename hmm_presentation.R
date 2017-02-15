@@ -44,9 +44,10 @@ for (i in 2:seqlength)
     mysequence[i] <- nucleotide             
     mystates[i]  <- state     
 }
+
 library(HMM)
 hmm=initHMM(states,nucleotides,transProbs=transitionmatrix,emissionProbs=emissionmatrix)
-DNAseq = simHMM(hmm,30)
+DNAseq = simHMM(hmm,1000)
 
 ## viterbi algorithm
 hmm = initHMM(states,nucleotides,transProbs=transitionmatrix,emissionProbs=emissionmatrix)
